@@ -1,0 +1,172 @@
+% !TeX document-id = {b30d14d7-2607-4df4-a1ff-fee288478bc5}
+% !TeX spellcheck = it_IT
+% !TeX root = UsoMail.tex
+
+\documentclass[structure=book,  
+pagelayout=standard,defaultfont=cochineal,partialtoc]{suftesi}
+\usepackage{fontspec}
+\usepackage[italian]{babel}
+\title{Le utenze di Workspace}
+\author{Claudio Duchi}
+\date{13 dicembre 2022}
+\newcommand{\printmail}[1]{\textbf{#1}}
+\usepackage[style=italian]{csquotes}
+\usepackage[%
+style=philosophy-modern,
+backend=biber]{biblatex}
+\addbibresource{UsoMail.bib}
+\partialtocsize{\footnotesize}
+\partialtocsecfont{\bfseries\itshape}
+\partialtocsubsecfont{\itshape}
+\partialtocseclabel{\bfseries}
+\partialtocbeforecode{\hrule\smallskip\textbf{Contents}\smallskip}
+\partialtocaftercode{\smallskip\hrule}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{La mail istituzionale}
+\printpartialtoc
+\section{Definizioni}
+La scuola fornisce ad ogni utente una mail istituzionale che permette 
+la comunicazione fra gli utenti interni e/o entità esterne alla scuola.
+Ogni mail viene rilasciata utilizzando il seguente formato:
+\begin{itemize}
+	\item \printmail{nome.cognome.doc@iisperugia.net} se l'utente è un docente
+	\item \printmail{nome.cognome.stu@iisperugia.net} se l'utente è uno studente
+	\item \printmail{nome.cognome.tir@iisperugia.net} se l'utente è un 
+	tirocinante
+	\item \printmail{nome.cognome.ata@iisperugia.net} se l'utente è un 
+	assistente 
+	amministrativo.
+\end{itemize}
+ 
+Ad ogni mail è associata una password di almeno otto caratteri che permette 
+l'accesso ai servizi di Google Workspace altrimenti noto come G Suite.
+
+\section{Regole di creazione o buone prassi} 
+La mail viene rilasciata dagli amministrazioni del sistema secondo le seguenti 
+regole
+Se l'utente ha un solo cognome e un solo nome viene creato
+\begin{center}
+\printmail{nome.cognome.doc@iisperugia.net}
+\end{center}
+esempio: Mario Rossi, docente avremo:
+\begin{center}
+	\printmail{mario.rossi.doc@iisperugia.net}
+\end{center}
+Se una persona ha più di un nome o di un cognome si usa il primo nome e il  
+primo cognome: Carlo Mario Bianchi Rossi studente diventa
+\begin{center}
+	\printmail{carlo.bianchi.stu@iisperugia.net}
+\end{center}
+In caso di omonimia viene aggiunto un numero dopo il cognome.
+\section{Mail istituzionale e Privacy}
+Partiamo da qualche osservazione: la mail è inviolabile,  la mail personale è 
+un dato sensibile la 
+mail istituzionale è una mail di lavoro.  Anche questa è un dato sensibile  
+dato che ha la forma nome.cognome. Per ovviare a ciò sono  
+disponibili delle mail alias~\footcite{Garante2007} che nascondono gli utenti 
+che  hanno rapporti 
+con l'esterno dell'organizzazione. Il Garante~\footcite{Garante2007} chiede che 
+venga definito un disciplinare noto agli utenti. Quindi deve essere chiaro che:
+la scuola fornendo questo servizio non può, salvo casi eccezionali, utilizzare 
+la mail personale dell'utente uso che poi dovrebbe essere autorizzato. 
+
+L'utente non può a sua volta utilizzare la mail istituzionale per  usi  
+personali. All'inizio del rapporto l'utente dovrebbe essere informato di questo 
+in modo da non potare a fraintendimenti in futuro.
+
+L'utente deve conoscere il percorso di vita della sua utenza, creazione, uso, 
+recupero eventuale di dati, 
+cancellazione~\footcite{Garante2007}~\footcite{Garante2019}. L'utente deve 
+essere consapevole che 
+può recuperare i propri dati trasferendo l'utenza. 
+\chapter{Buone pratiche}
+\printpartialtoc
+\section{Glossario}
+\begin{itemize}
+	\item Password stringa alfanumerica di almeno otto caratteri
+	\item Password provvisoria: Perugia01
+	\item Amministratore: gestore del sistema competente per sede
+	\item Coordinatore: nelle classi prime corrisponde alla commissione 
+	accoglienza
+	\item Accesso al sistema: Andare alla pagina di accesso di un qualunque 
+	prodotto Google, inserire la mail istituzionale, inserire la password e 
+	dare invio
+\end{itemize}
+\section{Creazione di un'utenza}
+Vediamo come dovrebbe essere creata un'utenza scolastica
+\begin{enumerate}
+	\item La segreteria all'atto dell'iscrizione consegna all'alunno il consenso
+	informato e lo allega alla domanda di iscrizione.
+	\item La segreteria fornisce le nuove utenze anche in modo massivo.
+	\item La segreteria deve indicare la classe dell'alunno
+	\item L'amministratore crea l'utenza assegnando una mail provvisoria
+	\item L'amministratore assegna l'alunno al suo gruppo classe
+	\item L'amministratore consegna al coordinatore l'elenco delle mail
+	\item Il coordinatore  consegna le mail alla classe 
+	\item La classe procede all'accesso
+	\item Il coordinatore comunica all'ufficio tecnico chi ha fatto l'accesso
+	\item L'ufficio tecnico invia  a questi, tramite l'email istituzionale, 
+	l'invito  per il registro elettronico
+\end{enumerate}
+Vediamo come dovrebbe essere creata un'utenza docente
+\begin{enumerate}
+	\item La segreteria fornisce le nuove utenze anche in modo massivo.
+	\item La segreteria deve indicare la classe di concorso
+	\item L'amministratore crea l'utenza assegnando una mail provvisoria
+	\item L'amministratore assegna il docente al suo dipartimento e ai sue 
+	gruppi  classe
+	\item L'utente provvede all'accesso
+	\item L'amministratore  comunica all'ufficio tecnico chi ha fatto l'accesso
+	\item L'ufficio tecnico invia  a questi, tramite l'email istituzionale, 
+	l'invito  per il registro elettronico
+\end{enumerate}
+Vediamo come dovrebbe essere creata un'utenza Amministrativa
+\begin{enumerate}
+	\item La segreteria fornisce le nuove utenze anche in modo massivo.
+	\item L'amministratore crea l'utenza assegnando una mail provvisoria
+	\item L'amministratore assegna l'amministrativo al suo gruppo
+	\item L'utente provvede all'accesso
+	\item L'amministratore  comunica all'ufficio tecnico chi ha fatto l'accesso
+	\item L'ufficio tecnico invia  a questi, tramite l'email istituzionale, 
+	l'invito  per il registro elettronico.
+\end{enumerate}
+\section{Recupero di un'utenza}
+Vediamo come recuperare un'utenza alunno:
+\begin{enumerate}
+	\item L'alunno comunica la perdita della password al coordinatore
+	\item Il coordinatore informa all'amministratore
+	\item L'amministratore resetta la password all'utente
+	\item L'amministratore assegna una password provvisoria 
+	\item L'alunno si connette e immette una nuova password di almeno otto 
+	caratteri 
+\end{enumerate}
+Vediamo come recuperare un'utenza docente:
+\begin{enumerate}
+	\item Il docente comunica la perdita della password al amministratore
+	\item Il amministratore informa all'amministratore
+	\item L'amministratore resetta la password all'utente
+	\item L'amministratore assegna una password provvisoria 
+	\item Il docente si connette e immette una nuova password di almeno otto 
+	caratteri 
+\end{enumerate}
+Vediamo come recuperare un'utenza amministrativa:
+\begin{enumerate}
+	\item L'amministrativa comunica la perdita della password al amministratore
+	\item Il amministratore informa all'amministratore
+	\item L'amministratore resetta la password all'utente
+	\item L'amministratore assegna una password provvisoria 
+	\item L'amministrativa si connette e immette una nuova password di almeno 
+	otto 
+	caratteri 
+\end{enumerate}
+Password divulgata Google segnala che la password di un utente è compromessa e 
+l'account viene sospeso.
+\begin{enumerate}
+	\item L'amministratore sblocca l'utente
+	\item Viene assegnata una nuova mail provvisoria 
+\end{enumerate}
+\nocite{*}
+\printbibliography
+\end{document}
