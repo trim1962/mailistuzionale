@@ -6,7 +6,9 @@
 \documentclass[structure=book,  
 pagelayout=standard,defaultfont=cochineal,partialtoc]{suftesi}
 \usepackage{fontspec}
-\usepackage[italian]{babel}
+\usepackage{polyglossia}
+\setmainlanguage{italian}
+\setotherlanguage{english}
 \title{Le utenze di Workspace}
 \author{Claudio Duchi}
 \date{13 dicembre 2022}
@@ -25,6 +27,7 @@ backend=biber]{biblatex}
 \usepackage{hyperref}
 \input{Include1}
 \begin{document}
+	\colophon{Claudio Duchi}{}
 \maketitle
 \tableofcontents
 \input{Include2}
