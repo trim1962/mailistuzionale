@@ -13,6 +13,8 @@ pagelayout=standard,defaultfont=cochineal,partialtoc]{suftesi}
 \author{Claudio Duchi}
 \date{\today}
 \usepackage{booktabs}
+\usepackage{imakeidx}
+\makeindex[intoc]
 \newcommand{\printmail}[1]{\textbf{#1}}
 \usepackage[style=italian]{csquotes}
 \usepackage[%
@@ -28,14 +30,15 @@ backend=biber]{biblatex}
 \usepackage{hyperref}
 \input{Include1}
 \begin{document}
-	\colophon{Claudio Duchi}{}
 \maketitle
+\colophon{Claudio Duchi}{}
 \tableofcontents
+\listoftables
 \input{Include2}
 \nocite{*}
 \printbibliography[
 heading=bibintoc,
 title={Bibliografia}
 ]
-\printbibliography
+\printindex
 \end{document}
