@@ -1,6 +1,7 @@
 % !TeX spellcheck = it_IT
 % !TeX root = UsoMail.tex
 \chapter{Gruppi}
+\printpartialtoc
 \section{Caratteristiche e struttura}
 Ogni gruppo ha:
 \begin{itemize}
@@ -12,12 +13,12 @@ Ogni gruppo ha:
 \end{itemize}
 
 \begin{center}
-\begin{tabular}{lccccc}
+\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
 \bottomrule
-\multicolumn{1}{p{3.2cm}}{Impostazioni di accesso}	& \multicolumn{1}{p{1.6cm}}{Proprietari del Gruppo} &  \multicolumn{1}{p{1.6cm}}{Gestore del Gruppo} &
-\multicolumn{1}{p{1.6cm}}{Membri del Gruppo} &
-\multicolumn{1}{p{1.6cm}}{Intera Organizzazione} &
-\multicolumn{1}{p{1.6cm}}{Esterno}\\
+Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
+Membri del Gruppo &
+Intera Organizzazione &
+Esterno\\
 \midrule
 Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd & & \\[1ex]
 \midrule
@@ -30,20 +31,45 @@ Chi può visualizzare i membri	&  \surd &  \surd &  \surd & \surd &  \\
 Chi può gestire i membri		&  \surd &  \surd  \\
 \bottomrule
 \end{tabular}
-	\captionof{table}{Impostazioni di accesso}
+	\captionof{table}{Impostazioni di accesso gruppi}
 \end{center}
-Non sono ammessi membri esterni all'organizzazione\footnote{Per inserire membri esterni bisogna utilizzare la console e entrare nel gruppo e inserire l'esterno}
+Non sono ammessi membri esterni all'organizzazione\footnote{Per inserire elementi non appartenenti alla scuola  bisogna intervenire da console, entrare nel gruppo e inserire l'utente esterno}
 
-Un gruppo fondamentale per il funzionamento di Classroom è Insegnanti di Classroom\footcite{Google2023}\index{Gruppo!Insegnanti di Classroom}. Chi è membro o membro in sospeso può creare delle Classroom. 
+Per popolare un gruppo\index{Gruppo!popolare gruppo} è possibile utilizzare da console le UA. Prima si crea il gruppo, definendo privacy etc. Poi, da console, si Seleziona la UA, quindi si selezionano gli utenti. Dal menu Altre opzioni --> Aggiungi utenti selezionati ai gruppi. Ad ogni gruppo è possibile assegnare un calendario.
 
-L'amministratore deve verificare chi è iscritto o ha chiesto l'iscrizione a questo gruppo. La descrizione del gruppo riporta:
+Altro modo di popolare un gruppo è utilizzando i gruppi nidificati\footcite{Google2023a}\index{Gruppo!nidificato}. Un gruppo è nidificato se è membro di un altro gruppo. Per esempio il gruppo Coordinatori Cavour Marconi Pascal ha come membri i gruppi: Coordinatori Madonna Alta, Coordinatori Olmo e Coordinatori Piscille. Il prossimo gruppo Docenti A.S. 23/24 avrà come membri i gruppi dipartimento. Ottenendo una migliore gestione di questo gruppo.
+
+\begin{center}
+	\begin{tabularx}{\linewidth}{>{\setlength\hsize{.8\hsize}}X>{\setlength\hsize{\hsize}\setlength\linewidth{\hsize}}X}
+\toprule	
+Regola&	Descrizione\\
+\midrule
+I membri dei gruppi secondari non sono membri diretti dei gruppi principali	&
+I membri dei gruppi secondari non appartengono ai gruppi principali, di conseguenza:
+\begin{itemize}
+	\item Non possono lasciare il gruppo principale.
+	\item Non compaiono come membri del gruppo principale.
+	\item Non possono cambiare le loro impostazioni di iscrizione nel gruppo principale.
+\end{itemize}\\
+I membri dei gruppi secondari ereditano alcune autorizzazioni dai gruppi principali&
+Se un file di Documenti Google viene condiviso con un gruppo principale, anche i membri del gruppo secondario potranno accedervi.\\
+I membri dei gruppi secondari possono pubblicare post nel gruppo principale&
+Se a tutti i membri del gruppo principale è consentito pubblicare post, anche i membri del gruppo secondario potranno pubblicare post nel gruppo principale.\\
+I membri dei gruppi secondari possono ricevere messaggi pubblicati nei gruppi principali&Se vuoi che i membri dei gruppi secondari ricevano i messaggi pubblicati nel gruppo principale, imposta l'autorizzazione Chi può pubblicare per il gruppo secondario su Tutti i membri dell'organizzazione. In caso contrario, i membri del gruppo secondario potrebbero non ricevere i messaggi pubblicati nel gruppo principale.\\
+\bottomrule
+\end{tabularx}
+	\captionof{table}{Regole gruppi nidificati}
+\end{center}
+\section{Insegnanti di Classroom}
+Un gruppo fondamentale per il funzionamento di Classroom è Insegnanti di Classroom\footcite{Google2023}\index{Gruppo!Insegnanti di Classroom}. Chi è membro effettivo o in sospeso può creare delle Classroom\index{Classroom}. 
+
+L'amministratore deve verificare chi è iscritto o ha chiesto l'iscrizione a questo gruppo. La sua descrizione riporta:
 
 	Il gruppo include tutti gli insegnanti di Classroom del tuo dominio. Gli utenti che si presentano come insegnanti sono aggiunti come membri in attesa fino ad approvazione. I membri del gruppo hanno privilegi aggiuntivi che puoi gestire nella Console di amministrazione.
 
 Il gruppo non deve essere mai cancellato.
-
-Per popolare un gruppo\index{Gruppo!popolare gruppo} è possibile utilizzare da console le UA. Prima si crea il gruppo, definendo privacy etc. Poi, da console, si Seleziona la UA, quindi si selezionano gli utenti. Dal menu Altre opzioni --> Aggiungi utenti selezionati ai gruppi. 
-
+\section{Gruppi per il funzionamento della scuola }
+Sono gruppi creati con le regole precedentemente definite e non ammettono, salvo forzature, membri esterni della scuola. Al momento l'unico membro esterno ammesso è \printmail{PGIS03300A@istruzione.it}\index{PGIS03300A@istruzione.it}
 \begin{center}
 	\begin{tabular}{ll}
 		\toprule
@@ -85,35 +111,58 @@ Funzioni Strumentali*&
 fs@iisperugia.net\\
 Gruppo autovalutazione di istituto&
 niv@iisperugia.net\\
-Gruppo di lavoro per l'inclusione&
+Gruppo di lavoro per l'inclusione*&
 gli@iisperugia.net\\
-Gruppo lavoro PCTO&
+Gruppo lavoro PCTO*&
 glpcto@iisperugia.net\\
 Gruppo tecnico UDA-PFI&
 gtup@iisperugia.net\\
-Orientamento in ingresso&
+Orientamento in ingresso*&
 orienta@iisperugia.net\\
 Referenti Covid 19&
 referenti.covid@iisperugia.net\\
-Staff&
+Staff*&
 staff@iisperugia.net\\
 Team Antibullismo &
 antibullismo@iisperugia.net\\
-Team Innovazione&
+Team Innovazione*&
 innovazione@iisperugia.net\\
-Team prevenzione dispersione&
+Team prevenzione dispersione*&
 teamdispgdl@iisperugia.net\\
-Tutor PCTO Madonna Alta&
+Tutor PCTO Madonna Alta*&
 tutormalta@iisperugia.net\\
-Tutor PCTO Olmo&
+Tutor PCTO Olmo*&
 tutorolmo@iisperugia.net\\
-Tutor PCTO Piscille &
+Tutor PCTO Piscille* &
 tutorpiscille@iisperugia.net\\
-Tutor PCTO Scuola&
+Tutor PCTO* Scuola&
 tutorscuola@iisperugia.net\\
 \midrule
 \end{tabular}
 \captionof{table}{Gruppi attivi}
 \end{center}
-
-
+\section{Gruppi speciali}
+Sono gruppi che non rispettano le regole precedenti e che in alcuni casi, permettono utenti esterni alla scuola
+\subsection{recipient}
+Questo gruppo ha solo elementi esterni alla scuola. Ha come membro \printmail{PGIS03300A@istruzione.it}\index{PGIS03300A@istruzione.it} e autorizza membri esterni alla scuola.
+\begin{center}
+	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
+		\bottomrule
+		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
+		Membri del Gruppo &
+		Intera Organizzazione &
+		Esterno\\
+		\midrule
+		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &  \surd& \surd \\[1ex]
+		\midrule
+		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
+		\midrule
+		Chi può  pubblicare post		&  \surd &  \surd &  \surd & &  \\[1ex]
+		\midrule
+		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & \surd &  \\
+		\midrule
+		Chi può gestire i membri		&  \surd &  \surd  \\
+		\bottomrule
+	\end{tabular}
+	\captionof{table}{Impostazioni di accesso gruppo recipient}
+\end{center}
