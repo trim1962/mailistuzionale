@@ -16,7 +16,7 @@ La funzione primaria di un gruppo è lo scambio di mail fra i membri del gruppo.
 
 La mail del gruppo rappresenta gli utenti di quel gruppo e permette azioni collettive. Un esempio di azione collettiva è l'inserimento di alunni in una Classroom\index{Classroom}. Se gli alunni appartengono allo stesso gruppo classe sarà sufficiente inserire la sola mail del gruppo per caricarli contemporaneamente nella Classroom. Purtroppo,  Classroom\index{Classroom}, ha un bug e permette di caricare solo dieci docenti con questo stesso metodo. 
 
-L'uso del gruppo facilita la gestione di Drive condivisi, Calendari, documenti etc. cioè in tutte quelle situazioni in cui è necessario condividere risorse con molte persone. L'inserimento della sola mail del gruppo risparmia la digitazione di molte mail.
+L'uso del gruppo facilita la gestione di Drive condivisi\index{Drive!condiviso}, Calendari, documenti etc. cioè in tutte quelle situazioni in cui è necessario condividere risorse con molte persone. L'inserimento della sola mail del gruppo risparmia la digitazione di molte mail.
 
 La tabella seguente rappresenta le regole con cui sono stati creati gran parte dei gruppi della nostra scuola. Per la privacy del gruppo, bisogna fare attenzione a non impostare "Chi può visualizzare le conversazioni" su Intera Organizzazione. Altrimenti si corre il rischio concreto che membri dell'organizzazione, leggano le mail interne del gruppo.
 \begin{center}
@@ -40,11 +40,13 @@ Chi può gestire i membri		&  \surd &  \surd  \\
 \end{tabular}
 	\captionof{table}{Impostazioni di accesso gruppi}
 \end{center}
-Non sono ammessi membri esterni all'organizzazione\footnote{Per inserire elementi non appartenenti alla scuola  bisogna intervenire da console, entrare nel gruppo e inserire l'utente esterno}
+Non sono ammessi membri esterni all'organizzazione\footnote{Per inserire elementi non appartenenti alla scuola  bisogna intervenire da console\index{Console!amministrazione}, entrare nel gruppo e inserire l'utente esterno}
+
+L'inserimento di utenti avviene da console\index{Console!amministrazione}, dall'applicazione gruppi\index{Applicazione!gruppi}. Questo inserimento di utenti avviene alla creazione del gruppo che successivamente. Tale iscrizione dipende dalle regole del gruppo ed è permessa solo agli utenti proprietari e/o gestori  gruppo.
 
 Per popolare un gruppo\index{Gruppo!popolare gruppo} è possibile utilizzare, da console, le UA\index{Unità!Organizzativa}. Si  procede in questo modo: prima si crea il gruppo, definendo privacy etc, poi, da console, si trova la UA che vogliamo inserire nel gruppo, quindi si selezionano gli utenti della UA. Dal menu Altre opzioni --> Aggiungi utenti selezionati ai gruppi. 
 
- Ad ogni gruppo è possibile assegnare un calendario o un drive condiviso\index{Drive!condiviso}
+ Ad ogni gruppo è possibile assegnare un calendario o un drive condiviso\index{Drive!condiviso!gruppo}
 
 Un altro modo per aggiungere utenti è utilizzando i gruppi nidificati\footcite{Google2023a}\index{Gruppo!nidificato}. Un gruppo è nidificato se è membro di un altro gruppo. Per esempio il gruppo Coordinatori Cavour Marconi Pascal ha come membri i gruppi: Coordinatori Madonna Alta, Coordinatori Olmo e Coordinatori Piscille. Il prossimo gruppo Docenti A.S. 23/24 avrà come membri i gruppi dipartimento. Ottenendo una migliore gestione di questo gruppo.
 
@@ -74,7 +76,7 @@ Un gruppo fondamentale per il funzionamento di Classroom\index{Classroom} è Ins
 
 L'amministratore deve verificare chi è iscritto o ha chiesto l'iscrizione a questo gruppo. La sua descrizione riporta:
 
-	Il gruppo include tutti gli insegnanti di Classroom\index{Classroom} del tuo dominio. Gli utenti che si presentano come insegnanti sono aggiunti come membri in attesa fino ad approvazione. I membri del gruppo hanno privilegi aggiuntivi che puoi gestire nella Console di amministrazione.
+	Il gruppo include tutti gli insegnanti di Classroom\index{Classroom} del tuo dominio. Gli utenti che si presentano come insegnanti sono aggiunti come membri in attesa fino ad approvazione. I membri del gruppo hanno privilegi aggiuntivi che puoi gestire nella Console di amministrazione\index{Console!amministrazione}.
 
 Il gruppo non deve essere mai cancellato.
 \section{Gruppi per il funzionamento della scuola }
@@ -176,9 +178,9 @@ Questo gruppo ha praticamente solo utenti esterni alla scuola. Ha come membro \p
 	\captionof{table}{Impostazioni di accesso gruppo recipient}
 \end{center}
 \section{Ruoli utenti}
-Ogni gruppo ha 
+Ogni gruppo\footcite{Google2023e} ha 
 \begin{itemize}
-	\item Proprietario
-	\item Gestore
-	\item Utente
+	\item Proprietario\index{Gruppo!proprietario}. Crea o cancella il gruppo, gestisce le iscrizioni e i messaggi 
+	\item Gestore\index{Gruppo!gestore} gestisce le iscrizioni e i messaggi
+	\item Utente\index{Gruppo!utente}
 \end{itemize}
