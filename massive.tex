@@ -1,6 +1,6 @@
 % !TeX root = UsoMail.tex
 \chapter{Massive upgrade}
-La console di amministrazione permette di inserire e/o modificare molti utenti contemporaneamente. Queste modifiche avvengono tramite un file csv\index{CSV } che deve essere formattato in maniera idonea.
+La console di amministrazione permette di inserire e/o modificare molti utenti contemporaneamente. Queste modifiche avvengono tramite un file CSV\cite{Google2023h}\index{CSV } che deve essere formattato in maniera idonea.
 \section{Come ottenere un file CSV}
 Per ottenere un file csv idoneo si procede da:
 \begin{enumerate}
@@ -17,17 +17,34 @@ Per ottenere un file csv idoneo si procede da:
 	\item Premere Scarica CSV
 	\item Aprire il file, si consiglia Calc\index{Calc} di LibreOffice\index{LibreOffice}
 \end{enumerate}
-Il file ottenuto ha 37 colonne ma non bisogna spaventarsi. Alcune colonne sono sempre richieste [Required], altre sono informative, altre sono facoltative [UPLOAD ONLY]. Un grosso problema è che al caricamento non viene fatto un controllo preventivo e se vi sono omonimie il sistema non avvisa limitandosi a sovrascrivere. Con un file CSV possiamo caricare fino a 150000 utenti.
-\section{Vari esempi}
-\begin{table}
-\begin{widebox}
-\begin{tabular}{llllll}
-First Name & Last Name & Email  & Password  & Org Unit Path  & New Status  \\ 
-{[Required]} & [Required] & [Required] & [Required] & [Required] & [UPLOAD ONLY] \\ 
-Nome & Cognome & nome.cognome@iisperugia.net & **** & /Scarto & Suspended \\  
-\end{tabular}
 
-\end{widebox}
+Il file ottenuto ha 37 colonne ma non bisogna spaventarsi. Alcune  sono sempre richieste [Required], altre sono informative, altre sono facoltative [UPLOAD ONLY]. 
+
+Un grosso problema è che al caricamento non viene fatto un controllo preventivo e se vi sono omonimie il sistema non avvisa limitandosi a sovrascrivere. Con un file CSV possiamo caricare fino a 150000 utenti. La password\index{Password} deve essere almeno di otto caratteri.
+
+Terminato il documento si salva in formato CSV e si ritorna in Amministrazione e si carica. Attenzione che viene salvato solo il foglio corrente.
+\section{Vari esempi}
+\subsection{Sospendere e spostare}
+Se dobbiamo sospendere e spostare degli utenti creiamo una tabella come la~\cref{tab:spostnewstat}
+
+Per farlo procediamo in questo modo. Scarichiamo il file CSV, eliminiamo le colonne in eccesso, modifichiamo il Org Unit Path e nella colonna New Status inseriamo Suspended. Salviamo il file in formato CSV apriamo la consolle e da gestione utenti carichiamo dando conferma.
+\begin{table}%[!h]
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|U{4mm}|U{16mm}|U{16mm}|U{20mm}|U{16mm}|U{16mm}|U{20mm}| }%|C{6mm}|*5{C{22.6mm}|}@{}}
+		\hline\rowcolor[gray]{.9}
+		&A			&B			&C&D&E&F\tabularnewline		
+	\end{tabular}\\
+	\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{4mm}|M{16mm}|M{16mm}|M{20mm} |M{16mm}|M{16mm}|M{20mm}|@{}}
+		% oppure
+		\hline 1 &First Name [Required] & Last Name  [Required]  & Email  [Required]&Password [Required]&Org Unit Path [Required]& New Status [UPLOAD ONLY] \tabularnewline 
+		\hline 2 & nome & cognome & nome.cognome@iisperugia.net &****&\textbackslash Scarto& Suspended \tabularnewline
+		\hline 
+	\end{tabular}
+\end{tabular}
 \caption{Modifica dell'Unità organizzativa e dello status}
 \label{tab:spostnewstat}
 \end{table}
+\todo{Aggiungere esempio creazione classe}
+\todo{Aggiungere cosa fare a fine anno}

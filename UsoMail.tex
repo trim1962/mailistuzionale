@@ -45,26 +45,15 @@ backend=biber]{biblatex}
 \renewcommand{\appendixpagename}{Appendice}
 \renewcommand\appendixtocname{Appendice}
 \usepackage{pdfpages}
-\newenvironment{ruotascatola}{%
-	\begin{lrbox}{0}\vtop\bgroup\hsize=0.9\textwidth
-		Tabelle, versione v.
-		\textwidth=0.9\hsize \linewidth=0.9\hsize \columnwidth=0.9\hsize
-\parindent=0sp\centering
-}{\egroup\end{lrbox}\rotatebox{90}{\box0}}
-\usepackage{xparse}
-\newbox{\Wbox}
-\NewDocumentEnvironment{widebox}{ O{c} }{%
-	\linewidth=\dimexpr \textwidth + \marginparsep
-	+ \marginparwidth\relax
-	\begin{lrbox}{\Wbox}%
-	}{\end{lrbox}%
-	\noindent
-	\ifdim\wd\Wbox < \linewidth
-	\makebox[\textwidth][c]{\box\Wbox}%
-	\else
-	\makebox[\textwidth][#1]{\box\Wbox}%
-	\fi}
-	\usepackage{multirow}
+\usepackage{changelog}
+\newchangelogsection{\critical}{Critico}
+
+\newcolumntype{C}[1]{>{\centering}p{#1}}
+\newcolumntype{M}[1]{>{\centering\rule[-3mm]{0pt}{8mm}}m{#1}}
+\newcolumntype{U}[1]{>{\centering\rule[-1mm]{0pt}{4.75mm}}m{#1}}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{todonotes}
 \begin{document}
 %\maketitle
 \makecover[ball color=white,draw=none,circular drop shadow]
