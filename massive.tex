@@ -20,12 +20,12 @@ Per ottenere un file csv idoneo si procede da:
 
 Il file ottenuto ha 37 colonne ma non bisogna spaventarsi. Alcune  sono sempre richieste [Required], altre sono informative, altre sono facoltative [UPLOAD ONLY]. 
 
-Un grosso problema è che al caricamento non viene fatto un controllo preventivo e se vi sono omonimie il sistema non avvisa limitandosi a sovrascrivere. Con un file CSV possiamo caricare fino a 150000 utenti. La password\index{Password} deve essere almeno di otto caratteri.
+Un grosso problema è che al caricamento non viene fatto un controllo preventivo e se vi sono omonimie il sistema non avvisa limitandosi a sovrascrivere. Con un file CSV possiamo caricare fino a 150000 utenti. La password\index{Password} deve essere almeno di otto caratteri. Per non modificare la password di un utente inserire nella colonna Password **** quattro asterischi.
 
 Terminato il documento si salva in formato CSV e si ritorna in Amministrazione e si carica. Attenzione che viene salvato solo il foglio corrente.
 \section{Vari esempi}
 \subsection{Sospendere e spostare}
-Se dobbiamo sospendere e spostare degli utenti creiamo una tabella come la~\cref{tab:spostnewstat}
+Se dobbiamo sospendere e spostare degli utenti creiamo una tabella come la~\cref{tab:spostnewstat1}
 
 Per farlo procediamo in questo modo. Scarichiamo il file CSV, eliminiamo le colonne in eccesso, modifichiamo il Org Unit Path e nella colonna New Status inseriamo Suspended. Salviamo il file in formato CSV apriamo la consolle e da gestione utenti carichiamo dando conferma.
 \begin{table}%[!h]
@@ -39,12 +39,30 @@ Per farlo procediamo in questo modo. Scarichiamo il file CSV, eliminiamo le colo
 	\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{4mm}|M{16mm}|M{16mm}|M{20mm} |M{16mm}|M{16mm}|M{20mm}|@{}}
 		% oppure
 		\hline 1 &First Name [Required] & Last Name  [Required]  & Email  [Required]&Password [Required]&Org Unit Path [Required]& New Status [UPLOAD ONLY] \tabularnewline 
-		\hline 2 & nome & cognome & nome.cognome@iisperugia.net &****&\textbackslash Scarto& Suspended \tabularnewline
+		\hline 2 & nome & cognome & nome.cognome@iisperugia.net &****&/Scarto& Suspended \tabularnewline
 		\hline 
 	\end{tabular}
 \end{tabular}
 \caption{Modifica dell'Unità organizzativa e dello status}
-\label{tab:spostnewstat}
+\label{tab:spostnewstat1}
 \end{table}
-\todo{Aggiungere esempio creazione classe}
+\subsection{Inserire nuovi utenti con modifica password}
+La~\cref{tab:spostnewstat2}  è un esempio di foglio che permette di inserire un utente, dandogli una password provvisoria e obbligandolo a modificarla al primo accesso. 
+\begin{table}%[!h]
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|U{4mm}|U{16mm}|U{16mm}|U{20mm}|U{16mm}|U{16mm}|U{20mm}| }%|C{6mm}|*5{C{22.6mm}|}@{}}
+		\hline\rowcolor[gray]{.9}
+		&A			&B			&C&D&E&F\tabularnewline		
+	\end{tabular}\\
+	\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{4mm}|M{16mm}|M{16mm}|M{20mm} |M{16mm}|M{16mm}|M{20mm}|@{}}% oppure
+		\hline 1 &First Name [Required] & Last Name  [Required]  & Email  [Required]&Password [Required]&Org Unit Path [Required]& Change Password at Next Sign-In \tabularnewline 
+		\hline 2 & nome & cognome & nome.cognome@iisperugia.net &Perugia01&/Studenti/classe& TRUE \tabularnewline
+		\hline 
+	\end{tabular}
+\end{tabular}
+\caption{Caricamento utente e cambio password obbligatorio}
+\label{tab:spostnewstat2}
+\end{table}
 \todo{Aggiungere cosa fare a fine anno}
