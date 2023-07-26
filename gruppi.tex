@@ -12,12 +12,14 @@ Ogni gruppo ha:
 	\item Proprietario 
 	\item Tipo di accesso
 \end{itemize}
-La funzione primaria di un gruppo è lo scambio di mail fra i membri del gruppo. Un utente scrive alla mail di gruppo e questa viene consegnata a tutti gli altri appartenenti. 
+La funzione primaria di un gruppo è lo scambio di mail fra i membri. Un utente scrive alla mail del gruppo e questa viene consegnata a tutti gli altri appartenenti. 
+
+Un utente  è membro\index{Utente!menbro} se appartiene ad un gruppo o è in sospeso\index{Utente!sospeso} se ha fatto domanda di appartenere ad un gruppo.
 
 I gruppi possono essere creati o da console\index{Console!amministrazione} o tramite l'applicazione gruppi.
 I due metodi non sono equivalenti\footcite{Google2023f}. Se un gruppo viene creato dall'applicazione non può essere utilizzato per configurazione\index{Gruppo!gruppo di configurazione} di funzionalità o servizi.
  
-La mail del gruppo rappresenta gli utenti di quel gruppo e permette azioni collettive. Un esempio di azione collettiva è l'inserimento di alunni in una Classroom\index{Classroom}. Se gli alunni appartengono allo stesso gruppo classe sarà sufficiente inserire la sola mail del gruppo per caricarli contemporaneamente nella Classroom. Purtroppo,  Classroom\index{Classroom}, ha un bug e permette di caricare solo dieci docenti con questo stesso metodo. 
+La mail del gruppo rappresenta gli utenti di quel gruppo e permette azioni collettive. Un esempio di azione collettiva è l'inserimento di alunni in una Classroom\index{Classroom}. Se gli alunni appartengono allo stesso gruppo classe sarà sufficiente inserire la sola mail del gruppo per caricarli contemporaneamente nella Classroom. Purtroppo,  Classroom\index{Classroom}, ha un bug e permette di caricare solo dieci docenti con questo metodo. 
 
 L'uso del gruppo facilita la gestione di Drive condivisi\index{Drive!condiviso}, Calendari, documenti etc. cioè in tutte quelle situazioni in cui è necessario condividere risorse con molte persone. L'inserimento della sola mail del gruppo risparmia la digitazione di molte mail.
 
@@ -45,14 +47,15 @@ Chi può gestire i membri		&  \surd &  \surd  \\
 \end{center}
 Non sono ammessi membri esterni all'organizzazione\footnote{Per inserire elementi non appartenenti alla scuola  bisogna intervenire da console\index{Console!amministrazione}, entrare nel gruppo e inserire l'utente esterno}
 
-L'inserimento di utenti avviene da console\index{Console!amministrazione}, dall'applicazione gruppi\index{Applicazione!gruppi}. Questo inserimento di utenti avviene alla creazione del gruppo che successivamente. Tale iscrizione dipende dalle regole del gruppo ed è permessa solo agli utenti proprietari e/o gestori  gruppo.
+L'inserimento di utenti avviene da console\index{Console!amministrazione}, dall'applicazione gruppi\index{Applicazione!gruppi}. Questo inserimento di utenti avviene sia alla creazione del gruppo che successivamente. Tale iscrizione dipende dalle regole  ed è permessa solo agli utenti proprietari e/o gestori.
 
 Per popolare un gruppo\index{Gruppo!popolare gruppo} è possibile utilizzare, da console, le UA\index{Unità!Organizzativa}. Si  procede in questo modo: prima si crea il gruppo, definendo privacy etc, poi, da console, si trova la UA che vogliamo inserire nel gruppo, quindi si selezionano gli utenti della UA. Dal menu Altre opzioni --> Aggiungi utenti selezionati ai gruppi. 
 
  Ad ogni gruppo è possibile assegnare un calendario o un drive condiviso\index{Drive!condiviso!gruppo}
 
 Un altro modo per aggiungere utenti è utilizzando i gruppi nidificati\footcite{Google2023a}\index{Gruppo!nidificato}. Un gruppo è nidificato se è membro di un altro gruppo. Per esempio il gruppo Coordinatori Cavour Marconi Pascal ha come membri i gruppi: Coordinatori Madonna Alta, Coordinatori Olmo e Coordinatori Piscille. Il prossimo gruppo Docenti A.S. 23/24 avrà come membri i gruppi dipartimento. Ottenendo una migliore gestione di questo gruppo.
-
+\todo{spiegare o modificare}
+\todo{Inserire inserimenti tramite cvs}
 \begin{center}
 	\begin{tabularx}{\linewidth}{>{\setlength\hsize{.8\hsize}}X>{\setlength\hsize{\hsize}\setlength\linewidth{\hsize}}X}
 \toprule	
@@ -74,8 +77,10 @@ I membri dei gruppi secondari possono ricevere messaggi pubblicati nei gruppi pr
 \end{tabularx}
 	\captionof{table}{Regole gruppi nidificati}
 \end{center}
+\section{Regole mail}
+\todo{spiegare chiaramente le regole per le mail}
 \section{Insegnanti di Classroom}
-Un gruppo fondamentale per il funzionamento di Classroom\index{Classroom} è Insegnanti di Classroom\footcite{Google2023}\index{Gruppo!Insegnanti di Classroom}. Chi è membro effettivo o in sospeso può creare delle Classroom\index{Classroom}. 
+Un gruppo fondamentale per il funzionamento di Classroom\index{Classroom} è Insegnanti di Classroom\footcite{Google2023}\index{Gruppo!Insegnanti di Classroom}. Chi è membro effettivo o in sospeso di questo  gruppo può creare le Classroom\index{Classroom}. 
 
 L'amministratore deve verificare chi è iscritto o ha chiesto l'iscrizione a questo gruppo. La sua descrizione riporta:
 

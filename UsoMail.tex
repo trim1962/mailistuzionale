@@ -54,6 +54,25 @@ backend=biber]{biblatex}
 \usepackage{colortbl}
 \usepackage{cleveref}
 \usepackage{todonotes}
+\makeatletter
+\newcommand{\bardatura}[1]{%
+	\sbox\z@{#1}%
+	\mbox{%
+		\kern.05em
+		\bardatura@rule{.3ex}%
+		\bardatura@rule{.6ex}%
+		\kern.05em
+		#1%
+		\kern.1em
+	}%
+}
+\newcommand{\bardatura@rule}[1]{%
+	\rlap{\vrule height \dimexpr#1+.2pt\relax
+		depth -\dimexpr#1-.2pt\relax
+		width \dimexpr\wd\z@+.1em\relax
+	}%
+}
+\makeatother
 \begin{document}
 %\maketitle
 \makecover[ball color=white,draw=none,circular drop shadow]
