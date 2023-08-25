@@ -1,12 +1,24 @@
-\documentclass[10pt,a4paper,tikz,border=25pt]{standalone}
+\documentclass[10pt,a4paper,tikz,border=20pt]{standalone}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
-%\usepackage{tikz}
-\usetikzlibrary{shapes,arrows.meta,shapes.misc,shapes.geometric,positioning,calc,through}
-\usetikzlibrary {arrows.meta}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,shapes.misc,shapes.geometric,positioning,calc,through}
+\usepackage{gitinfo2}
+\usepackage{graphicx}
+\renewcommand{\gitMark}{Branch:\,\gitBranch\,@\,\gitAbbrevHash{}; Author:\,\gitAuthorName; Date:\,\gitAuthorIsoDate~\textbullet{}}
+\makeatletter
+\AddToShipoutPictureBG{%
+	\AtPageLowerLeft{%
+		\kern2.6cm
+		\raisebox{\dimexpr.5\paperheight-.8\height}
+		{\rotatebox{90}{\gitMarkFormat\gitMarkPref{} \textbullet{} \gitMark}}%
+	}%
+}%
+\makeatother
 \begin{document}
 	\tikzset{
 		decision/.style={diamond, draw, %fill=blue!20,
@@ -40,8 +52,7 @@
 		trapezium right angle=120,
 	},
 	line/.style={draw, very thick, %color=black!50,
-	arrows = {-Stealth[length=10pt, inset=5pt]}
-		},
+		-latex'},
 	connessione/.style={
 		draw,
 		circle,

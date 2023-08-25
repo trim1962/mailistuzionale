@@ -24,8 +24,9 @@ La mail del gruppo rappresenta gli utenti di quel gruppo e permette azioni colle
 
 L'uso del gruppo facilita la gestione di Drive condivisi\index{Drive!condiviso}, Calendari, documenti etc. cioè in tutte quelle situazioni in cui è necessario condividere risorse con molte persone. L'inserimento della sola mail del gruppo risparmia la digitazione di molte mail.
 
-La tabella seguente rappresenta le regole con cui sono stati creati gran parte dei gruppi della nostra scuola. Per la privacy del gruppo, bisogna fare attenzione a non impostare "Chi può visualizzare le conversazioni" su Intera Organizzazione. Altrimenti si corre il rischio concreto che membri dell'organizzazione, leggano le mail interne del gruppo.
-\begin{center}
+La tabella~\cref{tab:ImpAccessoGruppi} mostra le regole con cui sono stati creati gran parte dei gruppi della nostra scuola. Per la privacy del gruppo, bisogna fare attenzione a non impostare "Chi può visualizzare le conversazioni" su Intera Organizzazione. Altrimenti si corre il rischio concreto che membri dell'organizzazione, leggano le mail interne del gruppo.
+\begin{table}
+\centering
 \begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
 \bottomrule
 Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
@@ -44,20 +45,24 @@ Chi può visualizzare i membri	&  \surd &  \surd &  \surd & \surd &  \\
 Chi può gestire i membri		&  \surd &  \surd  \\
 \bottomrule
 \end{tabular}
-	\captionof{table}{Impostazioni di accesso gruppi}
-\end{center}
+	\caption{Impostazioni di accesso gruppi}
+	\label{tab:ImpAccessoGruppi}
+\end{table}
 Non sono ammessi membri esterni all'organizzazione\footnote{Per inserire elementi non appartenenti alla scuola  bisogna intervenire da console\index{Console!amministrazione}, entrare nel gruppo e inserire l'utente esterno}
 
+Gli amministratori di sistema\index{Amministratore!Super amministratore} sono proprietari di ogni gruppo che viene creato. Attualmente i gruppi hanno come proprietari effettivi gli Admin. Tale impostazione deve essere modificata individuando per ogni gruppo un proprietario appartenete al gruppo.
+\todo{Spiegare meglio}
 L'inserimento di utenti avviene da console\index{Console!amministrazione}, dall'applicazione gruppi\index{Applicazione!gruppi}. Questo inserimento di utenti avviene sia alla creazione del gruppo che successivamente. Tale iscrizione dipende dalle regole  ed è permessa solo agli utenti proprietari e/o gestori.
 
 Per popolare un gruppo\index{Gruppo!popolare gruppo} è possibile utilizzare, da console, le UA\index{Unità!Organizzativa}. Si  procede in questo modo: prima si crea il gruppo, definendo privacy etc, poi, da console, si trova la UA che vogliamo inserire nel gruppo, quindi si selezionano gli utenti della UA\index{Unit\'{a}!Organizzativa}. Dal menu Altre opzioni --> Aggiungi utenti selezionati ai gruppi. Attenzione la modifica di UA non si ripercuote sul gruppo.  
 
  Ad ogni gruppo è possibile assegnare un calendario o un drive condiviso\index{Drive!condiviso!gruppo}
 
-Un altro modo per aggiungere utenti è utilizzando i gruppi nidificati\footcite{Google2023a}\index{Gruppo!nidificato}. Un gruppo è nidificato se è membro di un altro gruppo. Per esempio il gruppo Coordinatori Cavour Marconi Pascal ha come membri i gruppi: Coordinatori Madonna Alta, Coordinatori Olmo e Coordinatori Piscille. Il prossimo gruppo Docenti A.S. 23/24 avrà come membri i gruppi dipartimento. Ottenendo una migliore gestione di questo gruppo.
-\todo{spiegare o modificare}
+Un altro modo per aggiungere utenti è utilizzare i gruppi nidificati\footcite{Google2023a}\index{Gruppo!nidificato}. Un gruppo è nidificato se è membro di un altro gruppo. Per esempio il gruppo Coordinatori Cavour Marconi Pascal ha come membri i gruppi: Coordinatori Madonna Alta, Coordinatori Olmo e Coordinatori Piscille. I gruppi nidificati seguono le regole riassunte nella~\cref{tab:regGruppiNid}
+
 \todo{Inserire inserimenti tramite cvs}
-\begin{center}
+\begin{table}
+	\centering
 	\begin{tabularx}{\linewidth}{>{\setlength\hsize{.8\hsize}}X>{\setlength\hsize{\hsize}\setlength\linewidth{\hsize}}X}
 \toprule	
 Regola&	Descrizione\\
@@ -76,8 +81,9 @@ Se a tutti i membri del gruppo principale è consentito pubblicare post, anche i
 I membri dei gruppi secondari possono ricevere messaggi pubblicati nei gruppi principali&Se vuoi che i membri dei gruppi secondari ricevano i messaggi pubblicati nel gruppo principale, imposta l'autorizzazione Chi può pubblicare per il gruppo secondario su Tutti i membri dell'organizzazione. In caso contrario, i membri del gruppo secondario potrebbero non ricevere i messaggi pubblicati nel gruppo principale.\\
 \bottomrule
 \end{tabularx}
-	\captionof{table}{Regole gruppi nidificati}
-\end{center}
+	\caption{Regole gruppi nidificati}
+	\label{tab:regGruppiNid}
+\end{table}
 \section{Regole mail}
 \todo{spiegare chiaramente le regole per le mail}
 \section{Insegnanti di Classroom}
@@ -89,8 +95,9 @@ L'amministratore deve verificare chi è iscritto o ha chiesto l'iscrizione a que
 
 Il gruppo non deve essere mai cancellato.
 \section{Gruppi per il funzionamento della scuola }
-Sono gruppi creati con le regole precedentemente definite e non ammettono, salvo forzature, membri esterni della scuola. Al momento l'unico membro esterno ammesso è \printmail{PGIS03300A@istruzione.it}\index{PGIS03300A}
-\begin{center}
+Sono gruppi creati con le regole precedentemente definite e non ammettono, salvo forzature, membri esterni della scuola. Al momento l'unico membro esterno ammesso è \printmail{PGIS03300A@istruzione.it}\index{PGIS03300A}. La~\cref{tab:GruppiAttivi} li elenca.
+\begin{table}
+	\centering
 	\begin{tabular}{ll}
 		\toprule
 Nome gruppo&Mail\\
@@ -106,27 +113,27 @@ colmo@iisperugia.net\\
 Coordinatori Piscille AS 22-23*&
 cpiscille@iisperugia.net\\
 Dipartimento discipline economiche giuridiche*&
-dip\_discipline\_economiche\_giuridiche@iisperugia.net\\
+dipdeg@iisperugia.net\\
 Dipartimento discipline scientifiche*&
-dip\_discipline\_scientifiche@iisperugia.net\\
+dipdsc@iisperugia.net\\
 Dipartimento discipline umanistiche*&
-dip\_discipline\_umanistiche@iisperugia.net\\
+diddum@iisperugia.net\\
 Dipartimento elettrici elettronici*&
-dip\_elettrici\_elettronici@iisperugia.net\\
+dipdee@iisperugia.net\\
 Dipartimento lingue*&
-dip\_lingue@iisperugia.net\\
+dipdli@iisperugia.net\\
 Dipartimento meccanica*&
-dip\_meccanica@iisperugia.net\\
+dipdme@iisperugia.net\\
 Dipartimento moda*&
-dip\_moda@iisperugia.net\\
+dipdmo@iisperugia.net\\
 Dipartimento religione*&
-dip\_religione@iisperugia.net\\
+dipdre@iisperugia.net\\
 Dipartimento scienze motorie*&
-dip\_scienze\_motorie@iisperugia.net\\
+dipdsm@iisperugia.net\\
 Dipartimento sostegno*&
-dip\_sostegno@iisperugia.net\\
-Docenti as 22/23*&
-docenti\_22-23@iisperugia.net\\
+dipdso@iisperugia.net\\
+Docenti IIS*&
+docenti\_iis@iisperugia.net\\
 Funzioni Strumentali*&
 fs@iisperugia.net\\
 Gruppo autovalutazione di istituto&
@@ -163,170 +170,182 @@ Segreteria Personale&personale@iisperugia.net	\\
 Segreterie Personale&segreteria@iisperugia.net	\\
 \midrule
 \end{tabular}
-\captionof{table}{Gruppi attivi}
-\end{center}
+\caption{Gruppi attivi}
+\label{tab:GruppiAttivi}
+\end{table}
 \section{Dipartimenti}
-La nostra scuola ha dieci dipartimenti che riuniscono le classi di concorso
+La nostra scuola ha dieci dipartimenti che riuniscono le classi di concorso vedi la~\cref{tab:compgruppidip}
 \begin{center}
 	\begin{tabular}{lc}
 \toprule
-Nome	& Classi di concorso \\
+Nome Dipartimento	& Classi di concorso \\
 \midrule
-Dipartimento discipline economiche giuridiche*	& \begin{tabular}{cccc}
+Discipline economiche giuridiche*	& \begin{tabular}{cccc}
 		A010& A066 & A018 &A054  \\
 		B022	& A045 &A046  & A041 \\		
 	\end{tabular} \\
 	\midrule
-Dipartimento discipline scientifiche*	&\begin{tabular}{cccc}
+Discipline scientifiche*	&\begin{tabular}{cccc}
 		A034	& A020 &A026  & A050 \\
 		B012	&  &  &  \\
 	\end{tabular}\\
 	\midrule
-Dipartimento discipline umanistiche*	&\begin{tabular}{cc}
+Discipline umanistiche*	&\begin{tabular}{cc}
 	A012	& A021  \\
 \end{tabular}\\
 	\midrule
-Dipartimento elettrici elettronici*&\begin{tabular}{cc}
+Discipline elettrici elettronici*&\begin{tabular}{cc}
 	A040	& B015  \\
 \end{tabular}\\
 	\midrule
-Dipartimento lingue*&\begin{tabular}{cc}
+Lingue*&\begin{tabular}{cc}
 	AB24	& AA24  \\
 \end{tabular}\\
 	\midrule
-Dipartimento meccanica*&\begin{tabular}{cc}
+Meccanica*&\begin{tabular}{cc}
 	A042	& B017  \\
 \end{tabular}\\
 	\midrule
-Dipartimento moda*&\begin{tabular}{ccc}
+Moda*&\begin{tabular}{ccc}
 	A017	& A044&B018  \\
 \end{tabular}\\
 	\midrule
-Dipartimento religione*&\\
+Religione*&\\
 	\midrule
-Dipartimento scienze motorie*&A048\\
+Scienze motorie*&A048\\
 	\midrule
 Dipartimento sostegno*&\\
 \bottomrule
 \end{tabular}
 	\captionof{table}{Composizione gruppi dipartimentali}
+	\label{tab:compgruppidip}
 \end{center}
-
-\begin{center}
-	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
-		\bottomrule
-		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
-		Membri del Gruppo &
-		Intera Organizzazione &
-		Esterno\\
-		\midrule
-		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
-		\midrule
-		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
-		\midrule
-		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
-		\midrule
-		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
-		\midrule
-		Chi può gestire i membri		&  \surd &  \surd  \\
-		\bottomrule
-	\end{tabular}
-	\captionof{table}{Impostazioni di accesso gruppo didattica}
-\end{center}
+Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+\section{Gruppo Docenti IIS}
+I dieci dipartimenti formano il gruppo Docenti IIs. Il gruppo è un gruppo nidificato\index{Gruppo!nidificato} come indicato in~\cref{fig:verticalidocenti}
+\begin{figure}
+	\centering
+	\includestandalone[width=.6\textwidth]{verticali_docenti}
+	\caption{Composizione gruppo docenti\_iis}
+	\label{fig:verticalidocenti}
+\end{figure}
+Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+%\begin{table}
+%	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
+%		\bottomrule
+%		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
+%		Membri del Gruppo &
+%		Intera Organizzazione &
+%		Esterno\\
+%		\midrule
+%		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
+%		\midrule
+%		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
+%		\midrule
+%		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
+%		\midrule
+%		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
+%		\midrule
+%		Chi può gestire i membri		&  \surd &  \surd  \\
+%		\bottomrule
+%	\end{tabular}
+%	\captionof{table}{Impostazioni di accesso gruppo didattica}
+%\end{table}
 \section{Gruppi speciali}
 Sono gruppi che non rispettano le regole precedenti e che in alcuni casi, permettono utenti esterni alla scuola.
 \subsection{Didattica}
-Fanno parte di questo gruppo i membri della segreteria didattica
-\begin{center}
-	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
-		\bottomrule
-		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
-		Membri del Gruppo &
-		Intera Organizzazione &
-		Esterno\\
-		\midrule
-		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
-		\midrule
-		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
-		\midrule
-		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
-		\midrule
-		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
-		\midrule
-		Chi può gestire i membri		&  \surd &  \surd  \\
-		\bottomrule
-	\end{tabular}
-	\captionof{table}{Impostazioni di accesso gruppi dipartimentali}
-\end{center}
+Fanno parte di questo gruppo i membri della segreteria didattica. Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+%\begin{center}
+%	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
+%		\bottomrule
+%		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
+%		Membri del Gruppo &
+%		Intera Organizzazione &
+%		Esterno\\
+%		\midrule
+%		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
+%		\midrule
+%		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
+%		\midrule
+%		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
+%		\midrule
+%		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
+%		\midrule
+%		Chi può gestire i membri		&  \surd &  \surd  \\
+%		\bottomrule
+%	\end{tabular}
+%	\captionof{table}{Impostazioni di accesso gruppi dipartimentali}
+%\end{center}
 \subsection{Amministrativa}
-Fanno parte di questo gruppo i membri della segreteria amministrativa.
-\begin{center}
-	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
-		\bottomrule
-		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
-		Membri del Gruppo &
-		Intera Organizzazione &
-		Esterno\\
-		\midrule
-		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
-		\midrule
-		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
-		\midrule
-		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
-		\midrule
-		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
-		\midrule
-		Chi può gestire i membri		&  \surd &  \surd  \\
-		\bottomrule
-	\end{tabular}
-	\captionof{table}{Impostazioni di accesso gruppo amministrativa}
-\end{center}
+Fanno parte di questo gruppo i membri della segreteria amministrativa. Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+%\begin{center}
+%	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
+%		\bottomrule
+%		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
+%		Membri del Gruppo &
+%		Intera Organizzazione &
+%		Esterno\\
+%		\midrule
+%		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
+%		\midrule
+%		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
+%		\midrule
+%		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
+%		\midrule
+%		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
+%		\midrule
+%		Chi può gestire i membri		&  \surd &  \surd  \\
+%		\bottomrule
+%	\end{tabular}
+%	\captionof{table}{Impostazioni di accesso gruppo amministrativa}
+%\end{center}
 \subsection{Personale}
-Fanno parte di questo gruppo i membri della segreteria personale.
-\begin{center}
-	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
-		\bottomrule
-		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
-		Membri del Gruppo &
-		Intera Organizzazione &
-		Esterno\\
-		\midrule
-		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
-		\midrule
-		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
-		\midrule
-		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
-		\midrule
-		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
-		\midrule
-		Chi può gestire i membri		&  \surd &  \surd  \\
-		\bottomrule
-	\end{tabular}
-	\captionof{table}{Impostazioni di accesso gruppo personale}
-\end{center}
+Fanno parte di questo gruppo i membri della segreteria personale. Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+%\begin{center}
+%	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
+%		\bottomrule
+%		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
+%		Membri del Gruppo &
+%		Intera Organizzazione &
+%		Esterno\\
+%		\midrule
+%		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
+%		\midrule
+%		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
+%		\midrule
+%		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
+%		\midrule
+%		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
+%		\midrule
+%		Chi può gestire i membri		&  \surd &  \surd  \\
+%		\bottomrule
+%	\end{tabular}
+%	\captionof{table}{Impostazioni di accesso gruppo personale}
+%\end{center}
 \subsection{Segreterie}
-Fanno parte di questo gruppo i membri delle segreterie della scuola. Il gruppo è un gruppo nidificato\index{Gruppo!nidificato}
-\begin{center}
-	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
-		\bottomrule
-		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
-		Membri del Gruppo &
-		Intera Organizzazione &
-		Esterno\\
-		\midrule
-		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
-		\midrule
-		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
-		\midrule
-		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
-		\midrule
-		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
-		\midrule
-		Chi può gestire i membri		&  \surd &  \surd  \\
-		\bottomrule
-	\end{tabular}
-	\captionof{table}{Impostazioni di accesso gruppo segreteria}
-\end{center}
+Fanno parte di questo gruppo i membri delle segreterie della scuola. Il gruppo è un gruppo nidificato\index{Gruppo!nidificato}. Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+%\begin{center}
+%	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
+%		\bottomrule
+%		Impostazioni di accesso	& Proprietari del Gruppo &  Gestore del Gruppo &
+%		Membri del Gruppo &
+%		Intera Organizzazione &
+%		Esterno\\
+%		\midrule
+%		Chi può contattare i proprietari del gruppo	&  \surd &  \surd &  \surd &&  \\[1ex]
+%		\midrule
+%		Chi può visualizzare le conversazioni	&  \surd &  \surd &  \surd & & \\[1ex]
+%		\midrule
+%		Chi può  pubblicare post		&  \surd &  \surd &  \surd &\surd &  \\[1ex]
+%		\midrule
+%		Chi può visualizzare i membri	&  \surd &  \surd &  \surd & &  \\
+%		\midrule
+%		Chi può gestire i membri		&  \surd &  \surd  \\
+%		\bottomrule
+%	\end{tabular}
+%	\captionof{table}{Impostazioni di accesso gruppo segreteria}
+%\end{center}
 \subsection{Recipient}
 Questo gruppo ha praticamente solo utenti esterni alla scuola. Ha come membro \printmail{PGIS03300A@istruzione.it}\index{PGIS03300A} e autorizza membri esterni alla scuola.
 \begin{center}
@@ -361,11 +380,12 @@ Ognuno di questi gruppi ha un proprio calendario. Di ognuno di questi gruppi fan
 \end{itemize}
 
 I gruppi possono accedere al Drive condiviso Coordinatori di Classe.
+
+Le  regole di accesso per questi gruppi sono elencate nella~\cref{tab:ImpAccessoGruppi}
 \section{Ruoli utenti}
 Ogni gruppo\footcite{Google2023e} ha 
 \begin{itemize}
-	\item Proprietario\index{Gruppo!proprietario}. Crea o cancella il gruppo, gestisce le iscrizioni e i messaggi 
-	\item Gestore\index{Gruppo!gestore} gestisce le iscrizioni e i messaggi
+	\item Proprietario\index{Gruppo!proprietario}. Crea o cancella il gruppo, gestisce le iscrizioni e i messaggi. 
+	\item Gestore\index{Gruppo!gestore} gestisce le iscrizioni e i messaggi. 
 	\item Utente\index{Gruppo!utente}
 \end{itemize}
-Gli amministratori di sistema\index{Amministratore!Super amministratore} sono proprietari di ogni gruppo che viene creato. Attualmente i gruppi hanno come proprietari effettivi gli Admin. Tale impostazione deve essere modificata individuando per ogni gruppo un proprietario appartenete al gruppo.
