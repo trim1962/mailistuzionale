@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper,tikz,border=20pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+%\usepackage{tikz}
+\usetikzlibrary{shapes,arrows.meta,shapes.misc,shapes.geometric,positioning,calc,through}
+\usetikzlibrary {arrows.meta}
+\begin{document}
+	\tikzset{
+		decision/.style={diamond, draw, %fill=blue!20,
+			text width=6.5em, text badly centered, 
+		%	node distance=1cm, 
+			inner sep=0pt
+		},
+		block/.style={rectangle, draw, %fill=blue!20,
+		%	text width=15em,
+			 text centered, 
+		%	node distance=1.0cm,
+			%rounded corners, %minimum height=3em
+		},
+		vblock/.style={rectangle, draw,rotate=270, %fill=blue!20,
+				text width=22em,
+			%text centered, 
+			%	node distance=1.0cm,
+			%rounded corners, %minimum height=3em
+		},
+		loop/.style={chamfered rectangle,chamfered rectangle 	xsep=2cm, draw, %fill=blue!20,
+			text width=15em, text centered,  
+			%node distance=2.5cm,% minimum height=3em
+		},
+	cloud/.style={draw, ellipse,%fill=red!20, 
+		node distance=1cm, minimum height=2em
+	},
+	input/.style={ % requires library shapes.geometric
+		draw,
+		trapezium,
+		trapezium left angle=60,
+		trapezium right angle=120,
+	},
+	line/.style={draw, very thick, %color=black!50,
+	arrows = {-Latex[width=5pt, length=5pt]}
+		},
+	connessione/.style={
+		draw,
+		circle,
+		radius=5pt,
+	},
+	commento/.style={draw=black!20!white, line width=1pt, dash pattern=on 1pt off 
+		4pt on 6pt off 4pt,
+		%	inner ysep=6mm,inner xsep=1mm, 
+		rectangle,
+		rounded corners}
+	}
+	\def\dis{1cm}
+		\begin{tikzpicture}[scale=1, on grid]%, node distance = 3.0cm,on grid]
+			% Place nodes
+			%\node [cloud] (init) {Inizio};
+
+\node [vblock] (1) {Dipartimento discipline economiche e giuridiche};
+\node [vblock,right=of 1, anchor=north] (2) {Dipartimento discipline scientifiche};
+\node [vblock,right=of 2, anchor=north] (3) {Dipartimento discipline umanistiche};
+\node [vblock,right=of 3, anchor=north] (4) {Dipartimento discipline elettriche ed elettroniche};
+\node [vblock,right=of 4, anchor=north] (5) {Dipartimento lingue};
+\node [vblock,right=of 5, anchor=north] (6) {Dipartimento meccanica};
+\node [vblock,right=of 6, anchor=north] (7) {Dipartimento moda};
+\node [vblock,right=of 7, anchor=north] (8) {Dipartimento religione};
+\node [vblock,right=of 8, anchor=north] (9) {Dipartimento scienze motorie};
+\node [vblock,right=of 9, anchor=north] (10) {Dipartimento sostegno};
+\node [block,above=5*\dis of $(1)!0.5!(10)$](11) {Docenti IIS};
+
+\path [line] (1.west) -- (11);
+\path [line] (2.west) -- (11);
+\path [line] (3.west) -- (11);
+\path [line] (4.west) -- (11);
+\path [line] (5.west) -- (11);
+\path [line] (6.west) -- (11);
+\path [line] (7.west) -- (11);
+\path [line] (8.west) -- (11);
+\path [line] (9.west) -- (11);
+\path [line] (10.west) -- (11);
+
+
+		\end{tikzpicture}
+\end{document}
