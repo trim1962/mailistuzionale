@@ -17,7 +17,7 @@ La funzione primaria di un gruppo è lo scambio di mail fra i membri. Un utente 
 
 Un utente  è membro\index{Utente!menbro} se appartiene ad un gruppo o è in sospeso\index{Utente!sospeso} se ha fatto domanda di appartenere ad un gruppo.
 
-I gruppi possono essere creati o da console\index{Console!amministrazione} o tramite l'applicazione gruppi.
+I gruppi possono essere creati o da console\index{Console!amministrazione} o tramite l'applicazione Gruppi\index{Gruppi}.
 I due metodi non sono equivalenti\footcite{Google2023f}. Se un gruppo viene creato dall'applicazione non può essere utilizzato per configurazione\index{Gruppo!gruppo di configurazione} di funzionalità o servizi.
  
 La mail del gruppo rappresenta gli utenti di quel gruppo e permette azioni collettive. Un esempio di azione collettiva è l'inserimento di alunni in una Classroom\index{Classroom}. Se gli alunni appartengono allo stesso gruppo classe sarà sufficiente inserire la sola mail del gruppo per caricarli contemporaneamente nella Classroom. Purtroppo,  Classroom\index{Classroom}, ha un bug e permette di caricare solo dieci docenti con questo metodo. 
@@ -275,17 +275,33 @@ Sono gruppi a livello di alunni della classe e di consiglio di classe. Ogni clas
 	\label{tab:classi2324}
 \end{table}
 \subsection{Gruppi docenti}
-Il nome del gruppo  Docenti Classe Anno. Per la mail la regola è: Il primo  carattere è \textbf{D} poi ne seguono tre  per la classe e infine quattro caratteri per l'anno. 
-Esempio: il gruppo docenti del 1T1 è: Docenti Classe 1T1. La mail di questo gruppo è \printmail{d1t12324@iisperugia.net}. Le  modalità di accesso  sono elencate nella~\cref{tab:ImpAccessoGruppi}.
+Il nome del gruppo è Docenti Classe Anno. Per la mail la regola è: Il primo  carattere è \textbf{D}, poi  tre  per la classe e infine quattro  per l'anno scolastico~\cref{fig:schemamailgc}. 
+Esempio: il gruppo docenti del 1T1 è: Docenti 1T1 23 24. La mail di questo gruppo è \printmail{d1t12324@iisperugia.net}. Le  modalità di accesso  sono elencate nella~\cref{tab:ImpAccessoGruppi}.
+\begin{figure}
+		\vspace{6em}
+\begin{equation*}
+	\eqnmarkbox[blue]{sel}{X}\eqnmarkbox[red]{class}{XXX}\eqnmarkbox[blue]{anno}{XXXX}\text{@iisperugia.net}
+\end{equation*}
+\annotate[yshift=4em]{above,left}{sel}{d=docenti}
+\annotate[yshift=-4em]{below}{sel}{a=alunni}
+\annotate[yshift=2em]{above}{class}{Classe}
+\annotate[yshift=-4em]{below}{anno}{Anno scolastico}
+\vspace{4em}
+	\caption{Schema mail gruppi classe}
+	\label{fig:schemamailgc}
+\end{figure}
+
 \subsection{Gruppi alunni}
-Il nome del gruppo è una stringa di otto caratteri. Il primo  carattere è \textbf{A} poi ne seguono tre  per la classe e infine quattro caratteri per l'anno.
-Esempio: il gruppo alunni del 1T1 è: \textbf{A1T12324}. La mail di questo gruppo è \printmail{a1t12324@iisperugia.net}. Le  regole di accesso  sono elencate nella~\cref{tab:ImpAccessoGruppi}.
+Il nome del gruppo è una stringa di otto caratteri. Il primo  carattere è \textbf{A} poi  tre  per la classe e infine quattro caratteri per l'anno scolastico~\cref{fig:schemamailgc}.
+Esempio: il gruppo alunni del 1T1 è: Alunni 1T1 23 24. La mail di questo gruppo è \printmail{a1t12324@iisperugia.net}. Le  regole di accesso  sono elencate nella~\cref{tab:ImpAccessoGruppi}.
 \section{Gruppi scuola}
 I gruppi Docenti e Alunni permettono di costruire dei gruppi nidificati e di suddividere i docenti e gli alunni per plesso.  Fa parte di questi gruppi \printmail{PGIS03300A@istruzione.it}\index{PGIS03300A}
-\subsection{Indirzzo Moda}
+\subsection{Indirizzo Moda}
 Il gruppo dei docenti dell'indirizzo è \textbf{Indirizzo Moda}. La mail di questo gruppo è \printmail{indirizzomoda@iisperugia.net}. Le  regole di accesso  sono elencate nella~\cref{tab:ImpAccessoGruppi}. 
-\subsection{Indirzzo Acque}
-Il gruppo dei docenti dell'indirizzo è \textbf{Indirzzo Acque}. La mail di questo gruppo è \printmail{indirizzoacque@iisperugia.net}. Le  regole di accesso sono elencate nella~\cref{tab:ImpAccessoGruppi}.
+\subsection{Indirizzo Acque}
+Il gruppo dei docenti dell'indirizzo è \textbf{Indirizzo Acque}. La mail di questo gruppo è \printmail{indirizzoacque@iisperugia.net}. Le  regole di accesso sono elencate nella~\cref{tab:ImpAccessoGruppi}.
+\subsection{Indirizzo Elettrici}
+Il gruppo dei docenti dell'indirizzo è \textbf{Indirizzo Elettrici}. La mail di questo gruppo è \printmail{indirizzoelettrici@iisperugia.net}. Le  regole di accesso sono elencate nella~\cref{tab:ImpAccessoGruppi}.
 \subsection{Piscille}
 Il gruppo dei docenti di Piscille è \textbf{DPISCILLE}. La mail di questo gruppo è \printmail{dpiscille@iisperugia.net}. Le  regole di accesso sono elencate nella~\cref{tab:ImpAccessoGruppi}. 
 
@@ -301,8 +317,7 @@ Il gruppo degli alunni di Olmo è \textbf{AMALTA}. La mail di questo gruppo è \
 \section{Gruppi speciali}
 Sono gruppi che non rispettano le regole precedenti e che in alcuni casi, permettono utenti esterni alla scuola.
 \subsection{Didattica}
-Fanno parte di questo gruppo i membri della segreteria didattica. Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
-Le  regole di accesso di questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}
+Fanno parte di questo gruppo i membri della segreteria didattica. Le  regole di accesso per questo gruppo sono elencate nella~\cref{tab:ImpAccessoGruppi}.
 %\begin{center}
 %	\begin{tabular}{p{3.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}%{lccccc}
 %		\bottomrule
@@ -370,6 +385,8 @@ Fanno parte di questo gruppo i membri della segreteria personale. Le  regole di 
 %	\end{tabular}
 %	\captionof{table}{Impostazioni di accesso gruppo personale}
 %\end{center}
+\subsection{Sostegno Piscille}
+Fanno parte di questo gruppo i membri del sostegno di Piscille.  Le  regole di accesso  sono elencate nella~\cref{tab:ImpAccessoGruppi}.Non ha come membro \printmail{PGIS03300A@istruzione.it}\index{PGIS03300A}
 \subsection{Segreterie}
 Fanno parte di questo gruppo i membri delle segreterie della scuola. Il gruppo è un gruppo nidificato\index{Gruppo!nidificato}. Le  regole di accesso  sono elencate nella~\cref{tab:ImpAccessoGruppi}
 %\begin{center}
