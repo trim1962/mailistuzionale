@@ -1,0 +1,52 @@
+% !TeX root = UsoMail.tex
+% !TeX spellcheck = it_
+\chapter{Gestione}
+\section{Organizzazione}
+Il nostro Istituto ha tre ambienti che interagiscono fra di loro:\begin{enumerate}
+	\item Google Workspace
+	\item Microsoft 365
+	\item Canva
+\end{enumerate}
+Il primo gestisce l'accesso ad entrambi tramite SSO\footnote{Il single sign-on (in acronimo SSO, traducibile come "autenticazione unica" o "identificazione unica") è la proprietà di un sistema di controllo d'accesso che consente ad un utente di effettuare un'unica autenticazione valida per più sistemi software o risorse informatiche alle quali è abilitato.\cite{itwiki:137336632}} e sono legate a Workspace attraverso il provisioning.
+
+L'accesso a \textbf{365} e a \textbf{Canva} non è automatico ne generalista ma  è legato all'appartenenza a uno di due gruppi di Workspace   \textbf{TestOffice} per i docenti, \textbf{Office 365 studenti} per gli studenti.
+\section{Gestione dei ruoli}
+I tre ambienti hanno modi  diversi per  assegnare i ruoli \textbf{Docente} e \textbf{Studente}. Workspace tramite le Unità Organizzative,  Microsoft grazie l'assegnazione a posteriori di licenze differenti, Canva attraverso ad un parametro che viene scambiato con Google durante SSO.  
+\section{Comunicazioni}
+L'unica mail funzionante è quella istituzionale  tramite gmail. Outlook non funziona.
+
+Le comunicazioni interne della scuola funzionano usando i gruppi. Quindi è essenziale che ogni nuovo utente sia inserito nei suo gruppi: gruppo dipartimentale, gruppi classe, speciali (coordinatori, sostegno etc)
+
+\section{Esempi pratici} 
+\subsection*{Docente}
+Se arriva il docente Carlo Rossi
+\begin{enumerate}
+	\item Creare la mail e comunicarla
+	\item Inserirlo nella  sua UA dipartimento
+	\item Assegnarlo  al gruppo Corrispondente del dipartimento\footnote{Serve a far funzionare la mail list Docenti}
+	\item Assegnarlo ai gruppi docenti delle sue classi\footnote{Mail list per sede docenti e per indirizzi}
+	\item Assegnarlo al  TestOffice\footnote{Serve per permettergli l'accesso a 365 e Canva}
+	\item Modificare "centro di costo" del registro Google aggiungendo "staff"\footnote{Serve a Canva per riconoscerlo automaticamente come docente}
+	\item Assegnarlo a gruppi speciali Coordinatori, staff etc.
+	\item Assegnare  su 365 una licenza docente
+\end{enumerate}
+Se  parte il docente Carlo Rossi
+\begin{enumerate}
+	\item Va sospeso e spostato nella UA Scarto
+	\item Se possiede una classroom va invitato a cancellarla o passarne la proprietà.
+	\item Va tolto da ogni gruppo a cui appartiene sopratutto da  TestOffice\footnote{Canva invece di 365 ha un numero limitato di licenze, e se non lo togliamo da TestOffice Canva si blocca}
+\end{enumerate}
+\subsection*{Alunno}
+Se arriva l'alunno Mario Bianchi
+\begin{enumerate}
+	\item Creare la mail e comunicarla\footnote{Non bisogna inviarla alla segreteria didattica il sistema lo fa automaticamente}
+	\item Inserirlo nella  sua UA classe
+	\item Assegnarlo  al gruppo alunno della sua classe\footnote{Serve a far funzionare la mail list Alunni, sede, indirizzo, classi parallele}
+	\item Assegnarlo al  Office 365 studenti\footnote{Serve per permettergli l'accesso a 365 e Canva}
+	\item Assegnare  su 365 una licenza studente.
+\end{enumerate}
+Se  parte l'alunno Mario Bianchi
+\begin{enumerate}
+	\item Va sospeso e spostato nella UA Scarto
+	\item Va tolto da ogni gruppo a cui appartiene sopratutto da  Office 365 studenti\footnote{Canva invece di 365 ha un numero limitato di licenze, e se non lo togliamo da Office 365 studenti, Canva si blocca}
+\end{enumerate}

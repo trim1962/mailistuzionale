@@ -46,6 +46,7 @@ backend=biber]{biblatex}
 \renewcommand\appendixtocname{APPENDICE}
 \usepackage{pdfpages}
 \usepackage{amsmath}
+\usepackage{longtable}
 \usepackage{annotate-equations}
 \usepackage{changelog}
 \newchangelogsection{\critical}{Critico}
@@ -88,9 +89,6 @@ backend=biber]{biblatex}
 \listoffigures
 \input{Include2}
 \nocite{*}
-\printbibliography[
-heading=bibintoc,
-title={Bibliografia}
-]
+\printbibliography[heading=bibintoc, title={Bibliografia}]%
 \printindex
 \end{document}
